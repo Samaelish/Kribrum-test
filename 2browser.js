@@ -15,6 +15,7 @@ const classifyLinks = async url => {
     // Проверяю, что запрос прошёл успешно
     if (!response.ok) {
       console.error('Ошибка запроса')
+      return
     }
     const html = await response.text()
 
