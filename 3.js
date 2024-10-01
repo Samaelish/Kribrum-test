@@ -37,3 +37,5 @@ const secondsToHumanReadable = seconds => {
 
 
 console.log(secondsToHumanReadable('87448')) // 1 days 17 min 28 sec
+
+// P.S. задача на логику и немного на знание JS.
