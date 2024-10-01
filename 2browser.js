@@ -12,6 +12,7 @@ const classifyLinks = async url => {
   try {
     // Отправляю запрос на веб-страницу и получаем её html-содержимое (использовал аксиос)
     const response = await fetch(url)
+    // Проверяю, что запрос прошёл успешно
     if (!response.ok) {
       console.error('Ошибка запроса')
     }
