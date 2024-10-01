@@ -10,6 +10,9 @@ const classifyLinks = async url => {
   try {
     // Отправляю запрос на веб-страницу и получаем её html-содержимое (использовал аксиос)
     const response = await fetch(url)
+    if (!response.ok) {
+      console.error('Ошибка запроса')
+    }
     const html = await response.text()
 
     // Парсю её при помощи jsdom, имитации DOM для NodeJS
@@ -28,7 +31,7 @@ const classifyLinks = async url => {
       console.log(`Link ${linkUrl} is ${isInternal ? 'internal' : 'external'}`)
     })
   } catch (error) {
-    console.error(`Error occurred: ${error.message}`)
+    console.error(`Ошибка соединения: ${error.message}`)
   }
 }
 
